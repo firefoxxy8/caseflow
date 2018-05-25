@@ -103,7 +103,8 @@ class SubmitDecisionView extends React.PureComponent {
     const params = {
       data: {
         tasks: {
-          type: decision.type,
+          type: "AttorneyLegacyTask"
+          title: decision.type,
           issues: getUndecidedIssues(issues).map((issue) => _.pick(issue,
             ['disposition', 'vacols_sequence_id', 'remand_reasons', 'type', 'readjudication']
           )),
@@ -113,7 +114,7 @@ class SubmitDecisionView extends React.PureComponent {
     };
 
     const fields = {
-      type: decision.type === DECISION_TYPES.DRAFT_DECISION ? 'decision' : 'outside medical opinion (OMO) request',
+      type: decision.title === DECISION_TYPES.DRAFT_DECISION ? 'decision' : 'outside medical opinion (OMO) request',
       veteran: veteran_full_name,
       judge: judges[decision.opts.reviewing_judge_id].full_name
     };

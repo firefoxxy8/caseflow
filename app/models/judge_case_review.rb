@@ -1,6 +1,6 @@
 class JudgeCaseReview < ApplicationRecord
-  TITLES = {
-    omo_request: "OMO Request",
-    draft_decision: "Draft Decision"
-  }.freeze
+  enum title: {
+    omo_request: "omo_request",
+    draft_decision: "draft_decision"
+  }
 end

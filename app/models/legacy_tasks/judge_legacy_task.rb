@@ -5,8 +5,4 @@ class JudgeLegacyTask < LegacyTask
     task.assigned_at = case_assignment.reassigned_to_judge_date || case_assignment.assigned_to_location_date
     task
   end
-
-  def self.complete(task_attrs)
-    JudgeCaseReview.create(task_attrs)
-  end
 end
