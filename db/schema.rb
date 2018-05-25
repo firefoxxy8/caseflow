@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180524174054) do
-
+ActiveRecord::Schema.define(version: 20180525153724) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -72,7 +71,7 @@ ActiveRecord::Schema.define(version: 20180524174054) do
     t.integer "attorney_id"
     t.string "work_product"
     t.boolean "overtime", default: false
-    t.string "type"
+    t.string "title"
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

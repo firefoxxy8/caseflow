@@ -22,6 +22,10 @@ class AttorneyLegacyTask < LegacyTask
     task
   end
 
+  def self.complete(task_attrs)
+    AttorneyCaseReview.create(task_attrs)
+  end
+
   def assign_to_attorney!
     MetricsService.record("VACOLS: assign_case_to_attorney #{vacols_id}",
                           service: :vacols,
