@@ -103,7 +103,7 @@ class SubmitDecisionView extends React.PureComponent {
     const params = {
       data: {
         tasks: {
-          type: "AttorneyLegacyTask"
+          type: "AttorneyLegacyTask",
           title: decision.type,
           issues: getUndecidedIssues(issues).map((issue) => _.pick(issue,
             ['disposition', 'vacols_sequence_id', 'remand_reasons', 'type', 'readjudication']
