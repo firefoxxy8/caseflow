@@ -7,8 +7,8 @@ class AttorneyCaseReview < ApplicationRecord
   validates :work_product, inclusion: { in: QueueMapper::WORK_PRODUCTS.values }
 
   enum title: {
-    omo_request: "OmoRequest",
-    draft_decision: "DraftDecision"
+    omo_request: "omo_request",
+    draft_decision: "draft_decision"
   }
 
   attr_accessor :issues
