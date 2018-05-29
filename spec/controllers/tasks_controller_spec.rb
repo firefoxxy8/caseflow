@@ -266,7 +266,7 @@ RSpec.describe TasksController, type: :controller do
       let(:params) do
         {
           "type": "AttorneyLegacyTask",
-          "title": "omo_request",
+          "title": "OmoRequest",
           "reviewing_judge_id": judge.id,
           "work_product": "OMO - IME",
           "document_id": "123456789.1234",
@@ -290,7 +290,7 @@ RSpec.describe TasksController, type: :controller do
       let(:params) do
         {
           "type": "AttorneyLegacyTask",
-          "title": "draft_decision",
+          "title": "DraftDecision",
           "reviewing_judge_id": judge.id,
           "work_product": "Decision",
           "document_id": "123456789.1234",
@@ -318,7 +318,7 @@ RSpec.describe TasksController, type: :controller do
       let(:params) do
         {
           "type": "AttorneyLegacyTask",
-          "title": "omo_request",
+          "title": "OmoRequest",
           "work_product": "OMO - IME",
           "document_id": "123456789.1234",
           "overtime": true,
